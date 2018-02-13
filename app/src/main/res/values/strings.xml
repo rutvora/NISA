@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NISAapp</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="aboutMe">About Me</string>
+    <string name="buttonAfterOTPSent">Click after entering OTP</string>
+    <string name="buttonAfterOTPTimeout">Click Here</string>
+    <string name="aroundMe">Around Me</string>
+    <string name="strangers">Strangers</string>
+    <string name="friends">Friends</string>
+    <string name="myProfile">My Profile</string>
+    <string-array name="GenderSpinner">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

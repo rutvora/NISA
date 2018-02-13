@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "970610640497",
+    "firebase_url": "https://nisa-anspd.firebaseio.com",
+    "project_id": "nisa-anspd",
+    "storage_bucket": "nisa-anspd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970610640497:android:bdca58aaf05e837c",
+        "android_client_info": {
+          "package_name": "com.nisaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970610640497-54omcdae0jdek9bj796f6q0a2uept1ae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nisaapp",
+            "certificate_hash": "2e6613bf2e67b931d985fbd2d80b3e56add494f8"
+          }
+        },
+        {
+          "client_id": "970610640497-bctpa30teutecmqmsefmov4ft3igjq7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRFNHxcrR6_gZis-XQS3HSKH2wcooSvZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970610640497-bctpa30teutecmqmsefmov4ft3igjq7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
