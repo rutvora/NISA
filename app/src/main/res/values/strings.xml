@@ -9,6 +9,7 @@
     <string name="strangers">Strangers</string>
     <string name="friends">Friends</string>
     <string name="myProfile">My Profile</string>
+    <string name="noResultsFound">No Results Found</string>
     <string-array name="GenderSpinner">
         <item>Male</item>
         <item>Female</item>

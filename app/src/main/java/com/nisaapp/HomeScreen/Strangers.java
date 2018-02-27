@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import com.nisaapp.R;
 
 /**
- * Created by charu on 21-06-2017.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class Strangers extends android.app.Fragment {

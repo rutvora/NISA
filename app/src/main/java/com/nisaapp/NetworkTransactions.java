@@ -1,5 +1,6 @@
 package com.nisaapp;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -14,11 +15,12 @@ import java.nio.charset.Charset;
 import javax.net.ssl.HttpsURLConnection;
 
 /**
- * Created by charu on 11-01-2018.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class NetworkTransactions {
-    public static String makeHttpRequest(URL url, String method, String data) throws IOException {
+
+    private static String makeHttpRequest(URL url, String method, String data) throws IOException {
         Log.w("Internet Status", String.valueOf(isInternetAvailable()));
         String jsonResponse = "";
 
@@ -29,6 +31,7 @@ public class NetworkTransactions {
             urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setReadTimeout(60000 /* milliseconds */);
             urlConnection.setConnectTimeout(60000 /* milliseconds */);
+            urlConnection.setRequestProperty("authorization", "NISA " + Firebase.idToken);
             //urlConnection.connect();
             if (method.equals("POST")) {
                 urlConnection.setDoOutput(true);
@@ -78,12 +81,37 @@ public class NetworkTransactions {
 
     public static boolean isInternetAvailable() {
         try {
-            InetAddress ipAddr = InetAddress.getByName("https://us-central1-nisa-anspd.cloudfunctions.net/helloWorld");
+            InetAddress ipAddr = InetAddress.getByName("google.com");
             //You can replace it with your name
-            return !ipAddr.equals("");
+            return !ipAddr.toString().equals("");
 
         } catch (Exception e) {
             return false;
+        }
+    }
+
+    public interface AsyncResponse {
+        void processFinish(String output);
+    }
+
+    public static class NetworkRequest extends AsyncTask<String, Void, String> {
+
+        public AsyncResponse response = null;
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String response = null;
+            try {
+                response = makeHttpRequest(new URL(strings[0]), strings[1], strings[2]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return response;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            response.processFinish(s);
         }
     }
 

@@ -38,7 +38,7 @@ import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 /**
- * Created by charu on 11-01-2018.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class EditProfile extends Fragment implements View.OnClickListener, OnSuccessListener<UploadTask.TaskSnapshot>, OnCompleteListener<Void> {

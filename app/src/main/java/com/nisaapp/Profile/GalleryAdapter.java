@@ -14,6 +14,10 @@ import com.nisaapp.R;
 
 import java.io.File;
 
+/**
+ * Created by rutvora (www.github.com/rutvora)
+ */
+
 public class GalleryAdapter extends BaseAdapter {
     private static LayoutInflater inflater = null;
     Context context;

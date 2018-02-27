@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -40,7 +39,7 @@ import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 /**
- * Created by charu on 13-01-2018.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class MainProfile extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener, OnSuccessListener<UploadTask.TaskSnapshot> {
@@ -51,7 +50,6 @@ public class MainProfile extends Fragment implements View.OnClickListener, Adapt
     CircleImageView profilePic;
     TextView displayName;
     TextView aboutMe;
-    Button myGallery;
     TextView add;
     ImageButton editProfile;
     GridView gridView;
@@ -74,7 +72,6 @@ public class MainProfile extends Fragment implements View.OnClickListener, Adapt
         displayName.setText(Firebase.displayName);
         aboutMe = rootView.findViewById(R.id.aboutMe);
         aboutMe.setText(Firebase.gender + "|" + Firebase.age + "\n" + Firebase.aboutMe);
-        myGallery = rootView.findViewById(R.id.gallery);
         try {
             File file = new File(getActivity().getFileStreamPath("myImages"), "thumbs");
             File[] fileArray = file.listFiles();

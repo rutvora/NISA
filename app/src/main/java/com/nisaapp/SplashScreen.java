@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by charu on 21-06-2017.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class SplashScreen extends android.app.Fragment {

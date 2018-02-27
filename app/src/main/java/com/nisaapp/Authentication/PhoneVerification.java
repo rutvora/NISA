@@ -36,7 +36,7 @@ import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 /**
- * Created by charu on 08-01-2018.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class PhoneVerification extends Fragment implements View.OnClickListener {

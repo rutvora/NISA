@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * Created by charu on 22-01-2018.
+ * Created by rutvora (www.github.com/rutvora)
  */
 
 public class ImageRelated {

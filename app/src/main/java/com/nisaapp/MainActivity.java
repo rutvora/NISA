@@ -29,6 +29,10 @@ import java.io.File;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
+/**
+ * Created by rutvora (www.github.com/rutvora)
+ */
+
 public class MainActivity extends Activity implements OnCompleteListener<DocumentSnapshot> {
 
 
