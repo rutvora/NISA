@@ -34,11 +34,5 @@
         android:layout_height="55dp"
         android:layout_below="@id/loginElements"
         android:text="Click Here" />
-    <Button
-        android:id="@+id/googleSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next ->"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>

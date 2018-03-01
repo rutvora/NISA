@@ -43,7 +43,7 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:11.8.0'
 
     //Play Services
-    compile 'com.google.android.gms:play-services-auth:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
 
     //Firebase Storage
     compile 'com.google.firebase:firebase-storage:11.8.0'

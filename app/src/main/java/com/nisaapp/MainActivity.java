@@ -17,10 +17,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.nisaapp.AdditionalFunctions.Location;
 import com.nisaapp.HomeScreen.HomeScreen;
 import com.nisaapp.Profile.MainProfile;
 
@@ -70,7 +72,14 @@ public class MainActivity extends Activity implements OnCompleteListener<Documen
 
         setContentView(R.layout.main_activity);
         //////////////
-        String[] permissions = new String[]{android.Manifest.permission.READ_PHONE_STATE, android.Manifest.permission.READ_SMS, Manifest.permission.READ_EXTERNAL_STORAGE};
+
+        checkPermissions();
+
+    }
+
+    private void checkPermissions() {
+
+        String[] permissions = new String[]{android.Manifest.permission.READ_PHONE_STATE, android.Manifest.permission.READ_SMS, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION};
 
         for (int i = 0; i < permissions.length; i++) {
             if (ContextCompat.checkSelfPermission(this,
@@ -114,8 +123,6 @@ public class MainActivity extends Activity implements OnCompleteListener<Documen
             } else
                 Toast.makeText(this, "Please install/update Google Play Services", Toast.LENGTH_LONG).show();
         }
-        /////////////
-
 
     }
 
@@ -128,6 +135,8 @@ public class MainActivity extends Activity implements OnCompleteListener<Documen
         if (!file.exists()) {
             file.mkdir();
         }
+
+        Location.locationProvider = LocationServices.getFusedLocationProviderClient(this);
 
         Firebase.auth = FirebaseAuth.getInstance();
 

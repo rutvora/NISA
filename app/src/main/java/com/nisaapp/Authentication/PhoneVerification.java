@@ -2,7 +2,6 @@ package com.nisaapp.Authentication;
 
 import android.app.Fragment;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -47,7 +45,6 @@ public class PhoneVerification extends Fragment implements View.OnClickListener 
     Button googleSignIn;
     boolean codeSent;
     String mVerificationId;
-    GoogleSignInClient googleSignInClient;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,10 +63,6 @@ public class PhoneVerification extends Fragment implements View.OnClickListener 
         verify = rootView.findViewById(R.id.verify);
         verify.setOnClickListener(this);
 
-        googleSignIn = rootView.findViewById(R.id.googleSignIn);
-        googleSignIn.setVisibility(View.GONE);
-        googleSignIn.setOnClickListener(this);
-
         return rootView;
     }
 
@@ -80,10 +73,6 @@ public class PhoneVerification extends Fragment implements View.OnClickListener 
             case R.id.verify:
                 verify();
                 break;
-            case R.id.googleSignIn:
-                googleSignIn();
-                break;
-
         }
     }
 
@@ -187,10 +176,5 @@ public class PhoneVerification extends Fragment implements View.OnClickListener 
                     getActivity(),               // Activity (for callback binding)
                     mCallbacks);        // OnVerificationStateChangedCallbacks
         }
-    }
-
-    private void googleSignIn() {
-        Intent signIn = googleSignInClient.getSignInIntent();
-        startActivityForResult(signIn, 0);
     }
 }

@@ -10,6 +10,9 @@
     <string name="friends">Friends</string>
     <string name="myProfile">My Profile</string>
     <string name="noResultsFound">No Results Found</string>
+    <string name="gps_disabled">GPS Disabled</string>
+    <string name="open_location_settings">Open Location Settings</string>
+    <string name="Cancel">Cancel</string>
     <string-array name="GenderSpinner">
         <item>Male</item>
         <item>Female</item>
